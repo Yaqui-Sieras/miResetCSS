@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>miReset.css</title>
+  <link rel="stylesheet" href="miReset.css">
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>miReset.css</h1>
+    </header>
+    <div>
+      <main>
+        <h2>Introducción</h2>
+        <p>Con este reset, se busca resolver:</p>
+        <ul>
+          <li>Unificar el uso de Custom Properties.</li>
+          <li>Problemas de box-model mas generales.</li>
+          <li>Problemas con imagenes, videos e iconos svg.</li>
+          <li>Problemas con tipografias y etiquetas input en formularios.</li>
+          <li>Unificar la tipografia de todas las etiquetas de una web.</li>
+        </ul>
+        <h2>Configuraciones</h2>
+        <p>Aqui definimos los Custom properties</p>
+        <pre>
+:root {
+  color-scheme: light dark;
+  --color-oscuro: #0f0f0f;
+  --color-claro: #f0f0f0;
+  /* Tipografia */
+  --tipo-principal: Helvetica, Arial, Sans-serif;
+  --tipo-secundario: Verdana;
+  /* Tipografia */
+  --tamanho-raiz: 20px;
+  /* Color para las casillas de verificacion o botones de radio*/
+  accent-color: mediumvioletred;
+}
+</pre>
+        <p>Opcional</p>
+        <p>Configuramos si un usuario a activado el modo de alto contraste. (WD)</p>
+        <pre>
+@media (prefers-contrast: high) {
+  :root {
+    --color-oscuro: black;
+    --color-claro: white;
+  }
+}
+        </pre>
+        <p>Opcional</p>
+        <p>Desactivamos las animaciones en el caso de que el usuario haya configurado el modo activado sin animaciones.
+          (WD)</p>
+        <pre>
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+
+        </pre>
+        <h2>Resets</h2>
+        <p>Reseteamos los margenes y paddings de todas las etiquetas</p>
+        <pre>
+* {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+</pre>
+        <p>Evitamos problemas con imagenes</p>
+        <pre>
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* Opcional */
+  object-fit: cover;
+  object-position: center center;
+}
+
+img {
+  aspect-ratio: auto;
+}
+</pre>
+        <p>Reseteamos los enlaces para que funcionen como cajas y quitamos su decoracion</p>
+        <pre>
+a {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+/* ... Excepto las que se encuentran en parrafos */
+p a {
+  display: inline;
+}
+</pre>
+        <p>Quitamos las vinhetas de los <code>&lt;li&gt;</code></p>
+        <pre>
+li {
+  list-style-type: none;
+}
+</pre>
+        <p>Configuramos anclas suaves y el tamaño de la fuente</p>
+        <pre>
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+</pre>
+        <p>Desactivar algunoss estilos por defecto de las principales etiquetas de texto</p>
+        <pre>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1.4rem;
+  font-weight: 400;
+  /*
+    font-style: inherit;
+    text-decoration: none;
+  */
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.9rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.7rem;
+}
+h5 {
+  font-size: 1.6rem;
+}
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  text-wrap: pretty;
+}
+</pre>
+        <p>Evitamos problemas con los lineas separadoras hr</p>
+        <pre>
+hr {
+  border-style: inset;
+  border-width: 1px;
+}
+</pre>
+        <p>Evitamos problemas con los pseudoelementos de quotes</p>
+        <pre>
+blockquote:before,
+blockquote:after,
+b:before,
+b:after {
+  content: "";
+  content: none;
+}
+</pre>
+        <p>Configuramos el texto que seleccionamos</p>
+        <pre>
+::selection {
+  color: light-dark(var(--color-claro), var(--color-oscuro));
+  background-color: light-dark(var(--color-oscuro), var(--color-claro));
+}
+</pre>
+        <p>Nivelamos problemas de tipografias y colocacion de formularios</p>
+        <pre>
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+  /* Opcional*/
+  appearance: none;
+}
+textarea {
+  resize: none;
+  field-sizing: content;
+  text-wrap: pretty;
+}
+button {
+  cursor: pointer;
+}
+</pre>
+        <p>Reseteamos las tablas</p>
+        <pre>
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+</pre>
+        <p>Evitamos problemas con las svg</p>
+        <pre>
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+</pre>
+        <p>Configuramos la tipografia para toda la web</p>
+        <pre>
+body {
+  min-height: 100dvh;
+  font-size: 1.6rem;
+  font-family: var(--tipo-principal);
+  color: light-dark(var(--color-oscuro), var(--color-claro));
+  background-color: light-dark(var(--color-claro), var(--color-oscuro));
+  /* Opcional */
+  line-height: 1.4rem;
+  /* anterior en em */
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  /*font-smooth: always;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*align-content: center;*/
+  /*
+    scrollbar-color: blue skyblue;
+    scrollbar-width: none;
+    */
+}
+</pre>
+        <p>Para evitar que scroll siga en la pagina al terminar su recorrido del contenedor</p>
+        <pre>
+.sidebar,
+.article {
+  overscroll-behavior: contain;
+}
+</pre>
+      </main>
+    </div>
+    <footer>
+      <small>Desarrollado por <a href="https://yaqui-sieras.github.io/">Yaqui Sieras</a></small>
+    </footer>
+  </div>
+</body>
+
+</html>
