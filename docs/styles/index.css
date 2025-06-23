@@ -1,0 +1,6 @@
+pre code {
+  display: block;
+  padding: 1em;
+  background-color: #0b0b0b;
+  overflow-x: auto;
+}
