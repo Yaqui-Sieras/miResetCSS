@@ -33,8 +33,7 @@
         <h2>Configuraciones</h2>
         <p>Aqui definimos los Custom properties</p>
         <pre>
-          <code class="language-css">
-:root {
+          <code class="language-css">:root {
   color-scheme: light dark;
   --color-oscuro: #0f0f0f;
   --color-claro: #f0f0f0;
@@ -45,52 +44,44 @@
   --tamanho-raiz: 20px;
   /* Color para las casillas de verificacion o botones de radio*/
   accent-color: mediumvioletred;
-}
-          </code>
+}          </code>
         </pre>
         <p>Opcional</p>
         <p>Configuramos si un usuario a activado el modo de alto contraste. (WD)</p>
         <pre>
-          <code class="language-css">
-@media (prefers-contrast: high) {
+          <code class="language-css">@media (prefers-contrast: high) {
   :root {
     --color-oscuro: black;
     --color-claro: white;
   }
-}
-          </code>
+}         </code>
         </pre>
         <p>Opcional</p>
         <p>Desactivamos las animaciones en el caso de que el usuario haya configurado el modo activado sin animaciones.
           (WD)</p>
         <pre>
-          <code class="language-css">
-@media (prefers-reduced-motion: reduce) {
+          <code class="language-css">@media (prefers-reduced-motion: reduce) {
   * {
     animation: none;
     transition: none;
   }
-}
-          </code>
+}         </code>
         </pre>
         <h2>Resets</h2>
         <p>Reseteamos los margenes y paddings de todas las etiquetas</p>
         <pre>
-          <code class="language-css">
-* {
+          <code class="language-css">* {
   min-width: 0;
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
   vertical-align: baseline;
-}
-          </code>
+}         </code>
         </pre>
         <p>Evitamos problemas con imagenes</p>
         <pre>
-          <code class="language-css">
-img,
+          <code class="language-css">img,
 picture,
 video,
 iframe,
@@ -105,13 +96,11 @@ figure {
 
 img {
   aspect-ratio: auto;
-}
-          </code>
+}         </code>
         </pre>
         <p>Reseteamos los enlaces para que funcionen como cajas y quitamos su decoracion</p>
         <pre>
-          <code class="language-css">
-a {
+          <code class="language-css">a {
   cursor: pointer;
   display: block;
   text-decoration: none;
@@ -120,30 +109,24 @@ a {
 /* ... Excepto las que se encuentran en parrafos */
 p a {
   display: inline;
-}
-          </code>
+}         </code>
         </pre>
         <p>Quitamos las vinhetas de los <code class="language-html">&lt;li&gt;</code></p>
         <pre>
-          <code class="language-css">
-li {
+          <code class="language-css">li {
   list-style-type: none;
-}
-          </code>
+}         </code>
         </pre>
         <p>Configuramos anclas suaves y el tamaño de la fuente</p>
         <pre>
-          <code class="language-css">
-html {
+          <code class="language-css">html {
   font-size: 10px;
   scroll-behavior: smooth;
-}
-          </code>
+}         </code>
         </pre>
         <p>Desactivar algunoss estilos por defecto de las principales etiquetas de texto</p>
         <pre>
-          <code class="language-css">
-h1,
+          <code class="language-css">h1,
 h2,
 h3,
 h4,
@@ -199,43 +182,35 @@ h6 {
 
 p {
   text-wrap: pretty;
-}
-          </code>
+}         </code>
         </pre>
         <p>Evitamos problemas con los lineas separadoras hr</p>
         <pre>
-          <code class="language-css">
-hr {
+          <code class="language-css">hr {
   border-style: inset;
   border-width: 1px;
-}
-          </code>
+}         </code>
         </pre>
         <p>Evitamos problemas con los pseudoelementos de quotes</p>
         <pre>
-          <code class="language-css">
-blockquote:before,
+          <code class="language-css">blockquote:before,
 blockquote:after,
 b:before,
 b:after {
   content: "";
   content: none;
-}
-          </code>
+}         </code>
         </pre>
         <p>Configuramos el texto que seleccionamos</p>
         <pre>
-          <code class="language-css">
-::selection {
+          <code class="language-css">::selection {
   color: light-dark(var(--color-claro), var(--color-oscuro));
   background-color: light-dark(var(--color-oscuro), var(--color-claro));
-}
-          </code>
+}         </code>
         </pre>
         <p>Nivelamos problemas de tipografias y colocacion de formularios</p>
         <pre>
-          <code class="language-css">
-form,
+          <code class="language-css">form,
 input,
 textarea,
 select,
@@ -258,34 +233,28 @@ textarea {
 }
 button {
   cursor: pointer;
-}
-          </code>
+}         </code>
         </pre>
         <p>Reseteamos las tablas</p>
         <pre>
-          <code class="language-css">
-table,
+          <code class="language-css">table,
 tr,
 td {
   border-collapse: collapse;
   border-spacing: 0;
-}
-          </code>
+}         </code>
         </pre>
         <p>Evitamos problemas con las svg</p>
         <pre>
-          <code class="language-css">
-svg {
+          <code class="language-css">svg {
   width: 100%;
   display: block;
   fill: currentColor;
-}
-          </code>
+}         </code>
         </pre>
         <p>Configuramos la tipografia para toda la web</p>
         <pre>
-          <code class="language-css">
-body {
+          <code class="language-css">body {
   min-height: 100dvh;
   font-size: 1.6rem;
   font-family: var(--tipo-principal);
@@ -304,17 +273,14 @@ body {
     scrollbar-color: blue skyblue;
     scrollbar-width: none;
     */
-}
-          </code>
+}         </code>
         </pre>
         <p>Para evitar que scroll siga en la pagina al terminar su recorrido del contenedor</p>
         <pre>
-          <code class="language-css">
-.sidebar,
+          <code class="language-css">.sidebar,
 .article {
   overscroll-behavior: contain;
-}
-          </code>
+}         </code>
         </pre>
       </main>
     </div>

@@ -151,6 +151,15 @@ p {
   text-wrap: pretty;
 }
 
+/* Estilos para bloques de código */
+pre code {
+  display: block;
+  padding: 1.5rem;
+  color: light-dark(#070707, #f8f8f8);
+  background-color: light-dark(#f8f8f8, #070707);
+  overflow: auto;
+}
+
 /* Evitamos problemas con los lineas separadoras hr */
 hr {
   border-style: inset;
