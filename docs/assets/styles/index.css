@@ -1,6 +1,7 @@
 pre code {
   display: block;
   padding: 1.5rem;
-  background-color: #0b0b0b;
+  color: #f8f8f8;
+  background-color: #070707;
   overflow-x: auto;
 }
