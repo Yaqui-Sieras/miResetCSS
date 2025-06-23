@@ -216,7 +216,7 @@ svg {
 /* Configuramos la tipografia para toda la web */
 body {
   min-height: 100dvh;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: var(--tipo-principal);
   color: light-dark(var(--color-oscuro), var(--color-claro));
   background-color: light-dark(var(--color-claro), var(--color-oscuro));
