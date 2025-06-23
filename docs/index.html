@@ -26,7 +26,8 @@
         </ul>
         <h2>Configuraciones</h2>
         <p>Aqui definimos los Custom properties</p>
-        <pre>
+        <code>
+          <pre>
 :root {
   color-scheme: light dark;
   --color-oscuro: #0f0f0f;
@@ -39,32 +40,37 @@
   /* Color para las casillas de verificacion o botones de radio*/
   accent-color: mediumvioletred;
 }
-</pre>
+          </pre>
+        </code>
         <p>Opcional</p>
         <p>Configuramos si un usuario a activado el modo de alto contraste. (WD)</p>
-        <pre>
+        <code>
+          <pre>
 @media (prefers-contrast: high) {
   :root {
     --color-oscuro: black;
     --color-claro: white;
   }
 }
-        </pre>
+          </pre>
+        </code>
         <p>Opcional</p>
         <p>Desactivamos las animaciones en el caso de que el usuario haya configurado el modo activado sin animaciones.
           (WD)</p>
-        <pre>
+        <code>
+          <pre>
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none;
     transition: none;
   }
 }
-
-        </pre>
+          </pre>
+        </code>
         <h2>Resets</h2>
         <p>Reseteamos los margenes y paddings de todas las etiquetas</p>
-        <pre>
+        <code>
+          <pre>
 * {
   min-width: 0;
   margin: 0;
@@ -73,9 +79,11 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
-</pre>
+          </pre>
+        </code>
         <p>Evitamos problemas con imagenes</p>
-        <pre>
+        <code>
+          <pre>
 img,
 picture,
 video,
@@ -92,9 +100,11 @@ figure {
 img {
   aspect-ratio: auto;
 }
-</pre>
+          </pre>
+        </code>
         <p>Reseteamos los enlaces para que funcionen como cajas y quitamos su decoracion</p>
-        <pre>
+        <code>
+          <pre>
 a {
   cursor: pointer;
   display: block;
@@ -105,22 +115,28 @@ a {
 p a {
   display: inline;
 }
-</pre>
+          </pre>
+        </code>
         <p>Quitamos las vinhetas de los <code>&lt;li&gt;</code></p>
-        <pre>
+        <code>
+          <pre>
 li {
   list-style-type: none;
 }
-</pre>
+          </pre>
+        </code>
         <p>Configuramos anclas suaves y el tamaño de la fuente</p>
-        <pre>
+        <code>
+          <pre>
 html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
-</pre>
+          </pre>
+        </code>
         <p>Desactivar algunoss estilos por defecto de las principales etiquetas de texto</p>
-        <pre>
+        <code>
+          <pre>
 h1,
 h2,
 h3,
@@ -178,16 +194,20 @@ h6 {
 p {
   text-wrap: pretty;
 }
-</pre>
+          </pre>
+        </code>
         <p>Evitamos problemas con los lineas separadoras hr</p>
-        <pre>
+        <code>
+          <pre>
 hr {
   border-style: inset;
   border-width: 1px;
 }
-</pre>
+          </pre>
+        </code>
         <p>Evitamos problemas con los pseudoelementos de quotes</p>
-        <pre>
+        <code>
+          <pre>
 blockquote:before,
 blockquote:after,
 b:before,
@@ -195,16 +215,20 @@ b:after {
   content: "";
   content: none;
 }
-</pre>
+          </pre>
+        </code>
         <p>Configuramos el texto que seleccionamos</p>
-        <pre>
+        <code>
+          <pre>
 ::selection {
   color: light-dark(var(--color-claro), var(--color-oscuro));
   background-color: light-dark(var(--color-oscuro), var(--color-claro));
 }
-</pre>
+          </pre>
+        </code>
         <p>Nivelamos problemas de tipografias y colocacion de formularios</p>
-        <pre>
+        <code>
+          <pre>
 form,
 input,
 textarea,
@@ -229,26 +253,32 @@ textarea {
 button {
   cursor: pointer;
 }
-</pre>
+          </pre>
+        </code>
         <p>Reseteamos las tablas</p>
-        <pre>
+        <code>
+          <pre>
 table,
 tr,
 td {
   border-collapse: collapse;
   border-spacing: 0;
 }
-</pre>
+          </pre>
+        </code>
         <p>Evitamos problemas con las svg</p>
-        <pre>
+        <code>
+          <pre>
 svg {
   width: 100%;
   display: block;
   fill: currentColor;
 }
-</pre>
+          </pre>
+        </code>
         <p>Configuramos la tipografia para toda la web</p>
-        <pre>
+        <code>
+          <pre>
 body {
   min-height: 100dvh;
   font-size: 1.6rem;
@@ -269,14 +299,17 @@ body {
     scrollbar-width: none;
     */
 }
-</pre>
+          </pre>
+        </code>
         <p>Para evitar que scroll siga en la pagina al terminar su recorrido del contenedor</p>
-        <pre>
+        <code>
+          <pre>
 .sidebar,
 .article {
   overscroll-behavior: contain;
 }
-</pre>
+          </pre>
+        </code>
       </main>
     </div>
     <footer>
