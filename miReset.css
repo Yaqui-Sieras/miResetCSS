@@ -207,6 +207,27 @@ button {
   cursor: pointer;
 }
 
+/* Evitamos problemas con los inputs y botones de formulario */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+button,
+select {
+  color: light-dark(#070707, #f8f8f8);
+  background-color: light-dark(#f8f8f8, #070707);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: none;
+  border-color: mediumspringgreen;
+}
+
 /* Reseteamos las tablas */
 table,
 tr,
