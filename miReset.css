@@ -208,9 +208,7 @@ button {
 }
 
 /* Evitamos problemas con los inputs y botones de formulario */
-input[type="text"],
-input[type="email"],
-input[type="password"],
+input,
 textarea,
 button,
 select {
