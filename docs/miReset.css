@@ -214,9 +214,9 @@ button,
 select {
   color: light-dark(#070707, #f8f8f8);
   background-color: light-dark(#f8f8f8, #070707);
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
 }
 input:focus,
 textarea:focus,
