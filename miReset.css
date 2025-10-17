@@ -238,7 +238,7 @@ td {
 svg {
   width: 100%;
   display: block;
-  fill: currentColor;
+  /*fill: currentColor;*/
 }
 
 /* Configuramos la tipografia para toda la web */
